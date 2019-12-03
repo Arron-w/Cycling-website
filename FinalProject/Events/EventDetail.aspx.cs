@@ -106,11 +106,7 @@ namespace FinalProject.Events
         }
 
 
-      /// <summary>
-      /// /
-      /// </summary>
-      /// <param name="sender"></param>
-      /// <param name="e"></param>
+
 
         protected void BtnAddTags_Click(object sender, EventArgs e)
         {
@@ -220,6 +216,9 @@ namespace FinalProject.Events
             return retVal;
         }
 
+        protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
 
+        }
     }
 }

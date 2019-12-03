@@ -10,7 +10,7 @@
 
      
     <p>
-        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSourceEvent1">
+        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSourceEvent1" OnItemCommand="Repeater1_ItemCommand">
             <ItemTemplate>
                 <div class="row">
                    <div class="col-md-4"><span><h2><%#Eval("Title") %></h2> </span></div>
@@ -79,7 +79,7 @@
             </SelectParameters>
         </asp:SqlDataSource>
 
-    <asp:PlaceHolder  runat="server" ID="EventTagForm">
+   <asp:PlaceHolder  runat="server" ID="EventTagForm">
     
     <div class="row"><div class="col-md-4>">
        <h2>Tag with existing tags</h2><asp:CheckBoxList ID="CheckBoxList1" runat="server" DataSourceID="SqlDataSource3" DataTextField="TagName" DataValueField="Id" RepeatDirection="Horizontal">
@@ -102,6 +102,7 @@
     <input id="superRater" type="number" class="rating" min="0" max="5" step=0.2 data-size="lg" >
         <hr />
     </asp:PlaceHolder>
+    
 
 
    
@@ -141,10 +142,10 @@
   
     
      
-      <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:dbaw16abnConnectionString %>" SelectCommand="SELECT DISTINCT [Id], [TagName] FROM [EventTag]"></asp:SqlDataSource>
+     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:dbaw16abnConnectionString %>" SelectCommand="SELECT DISTINCT [Id], [TagName] FROM [EventTag]"></asp:SqlDataSource>
   <hr />
 
-    <asp:PlaceHolder ID="DiscussionForm" runat="server">
+    <asp:PlaceHolder ID="DiscussionForm" runat="server"> 
 
             <p>
         &nbsp;</p>
