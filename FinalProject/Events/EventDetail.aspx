@@ -73,7 +73,7 @@
     
     
         <%#Eval("Description") %>
-        <asp:SqlDataSource ID="SqlDataSourceEvent2" runat="server" ConnectionString="<%$ ConnectionStrings:dbaw16abnConnectionString %>" SelectCommand="SELECT [Title], [Body], [Author], [PostingTime], [Id] FROM [EventComment] WHERE ([Event_FKid] = @Event_FKid)" >
+        <asp:SqlDataSource ID="SqlDataSourceEvent2" runat="server" ConnectionString="<%$ ConnectionStrings:dbaw16abnConnectionString %>" SelectCommand="SELECT [Title], [Body], [Author], [PostingTime], [CommentId] FROM [EventComment] WHERE ([Event_FKid] = @Event_FKid)" >
             <SelectParameters>
                 <asp:QueryStringParameter Name="Event_FKid" QueryStringField="EventId" Type="Int16" />
             </SelectParameters>
@@ -108,7 +108,7 @@
    
 
     
-     <asp:LoginView ID="LoginView1" runat="server" >
+     <asp:LoginView ID="LoginView1" runat="server" OnViewChanged="LoginView1_ViewChanged" >
         <AnonymousTemplate><b>Sorry, you need to be logged in to add to the discussions, rate and apply tags.</b></AnonymousTemplate>
         <LoggedInTemplate>
        

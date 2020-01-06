@@ -6,4 +6,4 @@ EventDate Date,
 Author Varchar (300),
 PostingTime DateTime,
 Event_FKid varchar(255)
-);
+); 
