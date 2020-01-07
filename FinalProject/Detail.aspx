@@ -38,7 +38,7 @@
     
     
         <%#Eval("Description") %>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:dbaw16abnConnectionString %>" SelectCommand="SELECT [Title], [Body], [Author], [PostingTime], [Id] FROM [Comment] WHERE ([Photo_FKid] = @Photo_FKid)" >
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:dbaw16abnConnectionString %>" SelectCommand="SELECT [Title], [Body], [Author], [PostingTime], [Id] FROM [PhotoComment] WHERE ([Photo_FKid] = @Photo_FKid)" >
             <SelectParameters>
                 <asp:QueryStringParameter Name="Photo_FKid" QueryStringField="PhotoId" Type="Int16" />
             </SelectParameters>

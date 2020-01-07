@@ -58,7 +58,7 @@ namespace FinalProject
 
 
             SqlConnection conn = new SqlConnection(connStr);
-            SqlCommand insert = new SqlCommand("insert into Comment(Title, Body, Author, PostingTime, Photo_FKid) values(@Title, @Body, @Author, @PostingTime, @Photo_FKid)", conn);
+            SqlCommand insert = new SqlCommand("insert into PhotoComment(Title, Body, Author, PostingTime, Photo_FKid) values(@Title, @Body, @Author, @PostingTime, @Photo_FKid)", conn);
             insert.Parameters.AddWithValue("@Title", tbCommentTitle.Text);
             insert.Parameters.AddWithValue("@Body", tbBody.Text);
             insert.Parameters.AddWithValue("@Author", User.Identity.Name);

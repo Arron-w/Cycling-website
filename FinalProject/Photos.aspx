@@ -4,7 +4,7 @@
      
 
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbaw16abnConnectionString %>" 
-            SelectCommand="SELECT [Id], [Title], [Description], [DateOfPublication], [Author], [PDF], [AverageScore] FROM [vwPhotoPlusRatings]"></asp:SqlDataSource>
+            SelectCommand="SELECT [Id], [Title], [Description], [DateOfPublication], [Author], [PDF]  FROM [vwPhotoPlusRatings]"></asp:SqlDataSource>
          <asp:ListView ID="PhotoList" runat="server" DataKeyNames="Id" DataSourceID="SqlDataSource1">
              <AlternatingItemTemplate>
                  <%--<li style="background-color: #FFF8DC;">Id:--%>
@@ -28,8 +28,7 @@
                      <br />
                      <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("PDF") %>' height="500" width="600"/>
                      <br />
-                     <input value="<%# Eval("AverageScore") %>" type="number" class="rating" min="0" max="5" step="0.2" data-size="md" data-readonly="true" />
-                     <br />
+                     
                      
                  </li>
              </AlternatingItemTemplate>
@@ -101,8 +100,7 @@
                      <%--<img src='<%#Eval("PDF") %>'height="500" width="600"> --%>
                  <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("PDF") %>' height="500" width="600"/>
                      <br />
-                     <input value="<%# Eval("AverageScore") %>" type="number" class="rating" min="0" max="5" step="0.2" data-size="md" data-readonly="true" />
-                     <br />
+                   
                      
                  </li>
              </ItemTemplate>
