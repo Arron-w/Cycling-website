@@ -163,7 +163,7 @@ namespace FinalProject
 
         protected void ConnectTagAndPhoto(int tagId, int PhotoId, SqlConnection conn)
         {
-            string addTagPhotoConnection = "INSERT INTO TagJunction (Tag_FKid, Photo_FKid) VALUES (@Tag_FKid, @Photo_FKid)";
+            string addTagPhotoConnection = "INSERT INTO PhotoTagJunction (Tag_FKid, Photo_FKid) VALUES (@Tag_FKid, @Photo_FKid)";
             SqlCommand sqlCmd = new SqlCommand(addTagPhotoConnection, conn);
             sqlCmd.Parameters.AddWithValue("@Tag_FKid", tagId);
             sqlCmd.Parameters.AddWithValue("@Photo_FKid", PhotoId);
